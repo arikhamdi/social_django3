@@ -13,9 +13,13 @@ urlpatterns = [
     # registration
     path('register/', views.register, name='register'),
 
+    # edit user profile
+    path('edit/', views.edit, name='edit'),
+
     # change password urls
     path('password_change/', auth_views.PasswordChangeView.as_view(), name='password_change'),
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(), name='password_change_done'),
+    
     # reset password urls
     path('password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
